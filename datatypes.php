@@ -17,10 +17,10 @@ echo $price . "<br>";
 echo $name . "<br>";
 
 echo"<hr>";
-
+echo"gettype()" . "<br>";
 //to know or get the datatype
 //using gettype() function
-echo gettype($completed);
+echo gettype($completed) . "<br>";
 echo gettype($score) . "<br>";
 echo gettype($price) . "<br>";
 echo gettype($name) . "<br>";
@@ -35,7 +35,9 @@ echo var_dump($name) . "<br>";
 #compound data type
 #array
 $value = [1,2,3,1.5,true,"bid"];
-print_r($value);
+print_r($value) . "<br>";
+print_r(var_dump($value)) . "<br>" ;
+print_r(gettype($value)) . "<br>";
 #object
 #callable
 #iterable
