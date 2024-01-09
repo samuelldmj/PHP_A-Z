@@ -51,6 +51,7 @@ echo "Type casting" . "<br>";
 #type casting
 //you change the datatype by casting it
 $x = (int) "2";
+$x = (int) "test"; //output: int(0)
 echo var_dump($x);
 
 
