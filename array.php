@@ -1,7 +1,7 @@
 <?php  
 //array
 //php will automatically define index keys for your array starting from zero(0), if none is provided.
-$programmingLanguages = ['PHP', 'PYTHON', 'JAVA'];
+$programmingLanguages = ['PHP', 'PYTHON', 'JAVA' ];
 
 //ACCESSING ARRAYS  
 // echo $programmingLanguages[0] . "<br>"; //output: PHP
