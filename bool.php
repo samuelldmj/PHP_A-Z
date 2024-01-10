@@ -29,8 +29,9 @@
 
 //using is_bool()
 $isComplete = "false";
+echo is_bool($isComplete) . "<br>";
 echo gettype(is_bool($isComplete)) . "<br>";
-echo var_dump($isComplete) ;
+echo var_dump($isComplete);
 
 
 
