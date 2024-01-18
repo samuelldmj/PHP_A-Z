@@ -31,6 +31,7 @@ declare(strict_types=1);
 
 //splat(ellipsis) operator(...$variable) and variadic functions
 //the splat operator allows me to extend my parameter, to give room for more arguments
+//the parameters will be an array, so i can use all array functions in it.
 // function sum(...$number): int|float{
 //     // $sum = 0;
 //     // foreach($number as $num){
@@ -58,6 +59,7 @@ declare(strict_types=1);
 //it allows me to pass argument to the function based on the parameter variable name 
 function foo(int|float $x, int|float $y ): int|float{
         if($x % $y == 0){
+
             return $x / $y;
         }
         return $x ;
