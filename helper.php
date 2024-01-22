@@ -1,8 +1,8 @@
 <?php  
 function prettyPrintarray($value){
-    echo "<pre>;
-    return $value;
-    echo </pre>";
+    echo "<pre>";
+     print_r($value);
+    echo "</pre>";
 }
 
 
