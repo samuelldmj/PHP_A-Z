@@ -43,7 +43,7 @@ print_r(gettype($value)) . "<br>";
 #iterable
 
 #special data type
-#resource
+#resource: The resource type is a special data type that represents a reference to an external resource such as a file, database connection, network socket, image, or any other system-level resource.
 #null : no value
 
 echo "<hr>";
