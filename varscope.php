@@ -52,6 +52,7 @@ echo getValue() . "<br>";
 echo getValue() . "<br>";
 echo getValue() . "<br>";
  // i can use static keyword to cache this, check above
+ 
 
 
 
