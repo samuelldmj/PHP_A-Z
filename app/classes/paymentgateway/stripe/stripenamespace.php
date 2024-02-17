@@ -1,7 +1,7 @@
 <?php
 //NAMESPACES
 
-namespace app\namespace\stripe;
+namespace app\classes\stripe;
 class Transaction {
 
 

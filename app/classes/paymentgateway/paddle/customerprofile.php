@@ -1,6 +1,6 @@
 <?php
 //another class
-namespace app\namespace\paddle;
+namespace app\classes\paddle;
 class CustomerProfile {
 
 }
