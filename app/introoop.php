@@ -43,7 +43,7 @@ class Transaction{
     //to be able to get the private properties, i will need to create a getter function
     public function get_amount(): float{
         return $this->amount ;
-        return $this;
+
     }
 
     //A destructor is called when the object is destructed or the script is stopped or exited.
@@ -85,7 +85,8 @@ echo "<br>";
 
 //you can also destruct your object using the unset() and null
 // unset($transaction1);
-$transaction1 = null
+$transaction1 = null;
+
 
 
 

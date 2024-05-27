@@ -1,6 +1,7 @@
 <?php
 //another class
-namespace app\classes\paddle;
-class CustomerProfile {
+namespace App\classes\paymentgateway\paddle;
+class CustomerProfile 
+{
 
 }

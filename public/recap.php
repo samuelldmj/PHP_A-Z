@@ -91,8 +91,10 @@ public function __construct(
 }
 
 
-public function createUser($firstName, $lastName, $email){
-     $newUser = [
+public function createUser($firstName, $lastName, $email)
+{
+     $newUser = 
+     [
         'id' => $this->lastid++,
         "first_name" => $firstName,
         "last_name" => $lastName,
@@ -104,8 +106,10 @@ public function createUser($firstName, $lastName, $email){
 
 public function getUser($email)
 {
-    foreach($this->users as $value){
-        if($value['email'] === $email){
+    foreach($this->users as $value)
+    {
+        if($value['email'] === $email)
+        {
             return $value;
         }
     }
@@ -118,11 +122,25 @@ public function updateUser($email, $element, $value)
     return $this->users[$userIndex];
 }
 
-public function deleteUser($email){
 
+   public function deleteUser($email)
+   {
+    $users = $this->users;
+    foreach($users as $index => $user){
+        if($user['email'] == $email)
+        {
+            unset($this->users[$index]);
+        }
+
+    }
+
+    return $this->users;
+    
+   }
+   
 }
 
-}
+
 
 
 $newUsermodel = new UserModel;
@@ -139,8 +157,15 @@ $createNewUser2 = $newUsermodel->createUser("Ade", "Daniel", 'dan@gmail.com');
 // print_r($samuel);
 
 //updating user
-$updateSamuel = $newUsermodel->updateUser('Samuelldmj@yahoo.com', 'first_name', 'Abidal' );
-print_r($updateSamuel);
+// $updateSamuel = $newUsermodel->updateUser('Samuelldmj@yahoo.com', 'first_name', 'Abidal' );
+// print_r($updateSamuel);
+//print_r($newUsermodel->users);
+
+
+//deleting a user
+
+$deletingUserByKey = $newUsermodel->deleteUser('dan@gmail.com');
+print_r($deletingUserByKey);
 //print_r($newUsermodel->users);
 
 

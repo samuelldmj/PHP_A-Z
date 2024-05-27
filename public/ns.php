@@ -1,9 +1,10 @@
 <?php
 //NAMESPACE
-//The required file contains classes named Transaction
-require_once __DIR__ . "../app/namespace/pad/paddlenamespace.php";
-require_once __DIR__ . "../app/namespace/pad/customerprofile.php";
-require_once  __DIR__ . "../app/namespace/stripe/stripenamespace.php";
+//The required file contains classes named Transaction and customerProfile
+require_once __DIR__ . "/../app/classes/paymentgateway/paddle/transaction.php";
+require_once __DIR__ . "/../app/classes/paymentgateway/paddle/customerprofile.php";
+require_once  __DIR__ . "/../app/classes/paymentgateway/stripe/stripenamespace.php";
+require_once  __DIR__ . "/../app/classes/notification/email.php";
 
 
 /*
@@ -29,11 +30,11 @@ i will get an error
 
 //aliasing and use keyword
 //aliasing permit the use of classes with similar name in the same file
-use app\namespace\paddle\Transaction;
+use App\classes\paymentgateway\paddle\Transaction;
 //this display paddle transaction class, to display stripe transaction class, i wll need to indicate this userdefined name (stripeTransaction), as a temporary class name.
-use app\namespace\stripe\Transaction as stripeTransaction;
+use App\classes\stripe\Transaction as stripeTransaction;
 
-$paddleTransaction = new Transaction;
+$paddleTransaction = new Transaction(25);
 $stripeTransaction =  new stripeTransaction;
 var_dump($paddleTransaction, $stripeTransaction);
 

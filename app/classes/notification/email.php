@@ -1,6 +1,6 @@
 <?php
 
-namespace app\classes\notification;
+namespace App\classes\notification;
 
 class Email
 {

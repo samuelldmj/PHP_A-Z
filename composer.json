@@ -1,0 +1,19 @@
+{
+    "name": "samuel/phptut",
+    "description": "learning composer for autoloading",
+    "type": "learning",
+    "require": {
+        "ramsey/uuid": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Samuel",
+            "email": "samuelldmj5@gmail.com"
+        }
+    ]
+}

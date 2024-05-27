@@ -1,11 +1,6 @@
 <?php
 //PHP Coding Standards, Autoloading (PSR-4) & Composer 
 
-//The required file contains classes named Transaction
-// require_once "../app/namespace/pad/paddlenamespace.php";
-// require_once "../app/namespace/pad/customerprofile.php";
-// require_once "../app/namespace/stripe/stripenamespace.php";
-
 //AUTOLOADING
 /*
 =>In order to use a class defined in another PHP script, we can incorporate it with include or require statements. However,
@@ -28,19 +23,11 @@
 
 
 //getting the files using autoloading
-// spl_autoload_register(function ($class){
-// // $path = __DIR__ . './../' . lcfirst(str_replace('\\', '/', $class)) . 'php';
-// //     require $path;
-// // require "../app/namespace/pad/paddlenamespace.php";
+spl_autoload_register(function ($class){
+$path = __DIR__ . "/../" .str_replace('\\', '/', $class) . '.php';
+    require $path;
+});
 
-// });
-
-// require __DIR__ . " ../vendor/autoload.php";
-
-// use app\namespace\paddle\Transaction;
-
-// $paddleTransaction = new Transaction;
-// var_dump($paddleTransaction);
 
 //COMPOSER
 /*
@@ -50,12 +37,12 @@
 
 //autoloading using composer
 //working with a unique identifier package
-require __DIR__ . " /../vendor/autoload.php";
+require __DIR__ . "/../vendor/autoload.php";
 
-use app\namespace\paddle\Transaction;
+use App\classes\paymentgateway\paddle\Transaction;
 
-// $paddleTransaction = new Transaction;
-// var_dump($paddleTransaction);
+$paddleTransaction = new Transaction(25);
+var_dump($paddleTransaction);
 
-$id = new \Ramsey\Uuid\UuidFactory();
-echo $id->uuid4();
+// $id = new \Ramsey\Uuid\UuidFactory();
+// echo $id->uuid4();
